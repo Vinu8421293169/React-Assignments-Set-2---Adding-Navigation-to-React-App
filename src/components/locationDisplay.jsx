@@ -1,7 +1,7 @@
 import React from "react";
 
 const LocationDisplay = (props) => {
-  return <>{props["data-testid"]}</>;
+  return <div data-testid="location-display">{props["data-testid"]}</div>;
 };
 
 export default LocationDisplay;
