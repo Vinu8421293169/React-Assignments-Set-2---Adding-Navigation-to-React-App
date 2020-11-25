@@ -21,7 +21,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Redirect to="/other" />
         </Switch>
-        <LocationDisplay testid={location.pathname} />
+        <LocationDisplay data-testid={location.pathname} />
       </div>
     </>
   );
