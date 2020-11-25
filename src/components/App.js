@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import "../styles/App.css";
 import About from "./about";
 import Home from "./home";
@@ -11,10 +11,10 @@ const App = () => {
 
   return (
     <>
-      <a href="/">Home</a>
-      <br />
-      <a href="/about">About</a>
       <div id="main">
+        <a href="/">Home</a>
+        <br />
+        <a href="/about">About</a>
         <Switch>
           <Route path="/about" component={About} />
           <Route exact path="/" component={Home} />
