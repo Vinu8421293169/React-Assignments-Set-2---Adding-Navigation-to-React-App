@@ -20,7 +20,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route component={Other} />
         </Switch>
-        <LocationDisplay data-testid={location.pathname} />
+        <LocationDisplay />
       </div>
     </>
   );
