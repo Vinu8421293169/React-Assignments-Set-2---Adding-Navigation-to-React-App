@@ -7,8 +7,6 @@ import Other from "./other";
 import LocationDisplay from "./locationDisplay";
 
 const App = () => {
-  let location = useLocation();
-
   return (
     <>
       <div id="main">
