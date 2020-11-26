@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, useLocation, Link } from "react-router-dom";
+import { Route, Switch, useLocation, Link, Redirect } from "react-router-dom";
 import "../styles/App.css";
 import About from "./about";
 import Home from "./home";
@@ -15,8 +15,9 @@ const App = () => {
         <Link href="/about">About</Link>
         <Switch>
           <Route path="/about" component={About} />
-          <Route path="/" component={Home} />
-          <Route component={Other} />
+          <Route exact path="/" component={Home} />
+          <Route path="/other" component={Other}></Route>
+          <Redirect to="/other" />
         </Switch>
         <LocationDisplay />
       </div>
