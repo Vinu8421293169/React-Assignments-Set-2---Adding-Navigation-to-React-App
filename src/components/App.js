@@ -1,42 +1,37 @@
-import React, { Component } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import React, { Component, useState } from "react";
 import "../styles/App.css";
-import LocationDisplay from "./LocationDisplay";
-
-class About extends Component {
-  render() {
-    return <div>You are on the about page.</div>;
-  }
+import { Link, Route, Switch, useLocation } from "react-router-dom";
+import LocationDisplayComponent from "./LocationDisplay";
+function About() {
+  return <div>You are on the about page.</div>;
+}
+function Home() {
+  return <div>You are home.</div>;
 }
 
-class Home extends Component {
-  render() {
-    return <div>You are home.</div>;
-  }
+function Invalid() {
+  return <div>No match</div>;
 }
 
-class Other extends Component {
+class App extends Component {
   render() {
-    return <div>No match</div>;
+    return (
+      <>
+        <div id="main">
+          {/* Do not remove the main div */}
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" exact component={Home} />
+            <Route path="/" component={Invalid} />
+          </Switch>
+          <LocationDisplayComponent />
+        </div>
+      </>
+    );
   }
 }
-
-const App = () => {
-  return (
-    <>
-      <div id="main">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/" exact component={Home} />
-          <Route path="/" component={Other} />
-        </Switch>
-        <LocationDisplay />
-      </div>
-    </>
-  );
-};
 
 export default App;
-export { LocationDisplay };
+export const LocationDisplay = LocationDisplayComponent;
