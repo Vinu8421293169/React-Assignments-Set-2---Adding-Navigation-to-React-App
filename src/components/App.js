@@ -1,18 +1,18 @@
 import React from "react";
-import { Route, Switch, useLocation, Link, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "../styles/App.css";
 import About from "./about";
 import Home from "./home";
 import Other from "./other";
-import LocationDisplay from "./locationDisplay";
+import LocationDisplay from "./LocationDisplay";
 
 const App = () => {
   return (
     <>
       <div id="main">
-        <Link href="/">Home</Link>
+        <a href="/">Home</a>
         <br />
-        <Link href="/about">About</Link>
+        <a href="/about">About</a>
         <Switch>
           <Route path="/about" component={About} />
           <Route exact path="/" component={Home} />
