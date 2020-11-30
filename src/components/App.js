@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import "../styles/App.css";
 import About from "./about";
 import Home from "./home";
@@ -10,9 +10,9 @@ const App = () => {
   return (
     <>
       <div id="main">
-        <a href="/">Home</a>
+        <Link href="/">Home</Link>
         <br />
-        <a href="/about">About</a>
+        <Link href="/about">About</Link>
         <Switch>
           <Route path="/about" component={About} />
           <Route exact path="/" component={Home} />
