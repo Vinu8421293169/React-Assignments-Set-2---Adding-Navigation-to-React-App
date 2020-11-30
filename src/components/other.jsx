@@ -3,7 +3,7 @@ import "../styles/App.css";
 
 class Other extends Component {
   render() {
-    return <>No match</>;
+    return <div>No match</div>;
   }
 }
 
