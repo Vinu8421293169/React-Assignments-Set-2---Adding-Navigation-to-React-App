@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 
-const LocationDisplay = (props) => {
+const LocationDisplay = () => {
   let location = useLocation();
   return <div data-testid="location-display">{location.pathname}</div>;
 };
