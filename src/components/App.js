@@ -5,13 +5,13 @@ import LocationDisplay from "./LocationDisplay";
 
 class About extends Component {
   render() {
-    return <h1>You are on the about page</h1>;
+    return <div>You are on the about page.</div>;
   }
 }
 
 class Home extends Component {
   render() {
-    return <h1>You are home</h1>;
+    return <div>You are home.</div>;
   }
 }
 
@@ -26,11 +26,10 @@ const App = () => {
     <>
       <div id="main">
         <Link href="/">Home</Link>
-        <br />
         <Link href="/about">About</Link>
         <Switch>
           <Route path="/about" component={About} />
-          <Route exact path="/" component={Home} />
+          <Route path="/" exact component={Home} />
           <Route component={Other} />
         </Switch>
         <LocationDisplay />
